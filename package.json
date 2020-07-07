@@ -1,0 +1,17 @@
+{
+  "name": "eedc_blog",
+  "version": "1.0.0",
+  "description": "Blogs that rely on vuepress deployed on github pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.5.2"
+  }
+}
