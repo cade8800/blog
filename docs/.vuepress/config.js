@@ -69,7 +69,7 @@ module.exports = {
             {
                 title: 'Java',
                 collapsable: true,
-                children: ['/java/', '/java/one', '/java/two',]
+                children: ['/java/1', '/java/2',]
             },
         ]
 
