@@ -1,7 +1,7 @@
 module.exports = {
     base: '/blog/',
     title: 'EEDC NOTES',
-    description: 'All a dream to begin with.Ain’t nobody ever been free.',
+    description: 'Man is born free; and everywhere he is in chains. One thinks himself the master of others, and still remains a greater slave than they.',
 
     themeConfig: {
         displayAllHeaders: true,
