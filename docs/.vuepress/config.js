@@ -48,6 +48,7 @@ module.exports = {
                             { text: 'Angular', link: '/angular/' },
                             { text: 'Vue', link: '/vue/' },
                             { text: 'JavaScript', link: '/js/' },
+                            { text: 'App', link: '/app/' },
                         ]
                     },
                 ]
@@ -62,20 +63,24 @@ module.exports = {
                 title: 'Home',
                 path: '/',
                 collapsable: false,
-                sidebarDepth: 1,
-                children: [
-                    '/'
-                ]
+                sidebarDepth: 1
             },
             {
                 title: 'Java',
+                path: '/java/',
                 collapsable: true,
                 children: ['/java/1', '/java/2', '/java/3', '/java/4', '/java/5',]
             },
             {
                 title: 'JavaScript',
+                path: '/js/',
                 collapsable: true,
                 children: ['/js/1']
+            },
+            {
+                title: 'App',
+                path: '/app/',
+                collapsable: true
             },
         ]
 
