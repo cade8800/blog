@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spring Data JPA 简单查询--方法定义规则 | EEDC NOTES</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="Man is born free; and everywhere he is in chains. One thinks himself the master of others, and still remains a greater slave than they.">
+    <link rel="preload" href="/blog/assets/css/0.styles.c46edb2a.css" as="style"><link rel="preload" href="/blog/assets/js/app.519dcfbe.js" as="script"><link rel="preload" href="/blog/assets/js/2.47a29e6a.js" as="script"><link rel="preload" href="/blog/assets/js/10.5ebb890a.js" as="script"><link rel="prefetch" href="/blog/assets/js/11.f87dfd5d.js"><link rel="prefetch" href="/blog/assets/js/12.7e31b58f.js"><link rel="prefetch" href="/blog/assets/js/13.a78864e4.js"><link rel="prefetch" href="/blog/assets/js/14.37e0fe7c.js"><link rel="prefetch" href="/blog/assets/js/15.8923c7eb.js"><link rel="prefetch" href="/blog/assets/js/16.2f8145d2.js"><link rel="prefetch" href="/blog/assets/js/17.b01048c2.js"><link rel="prefetch" href="/blog/assets/js/18.fa740c49.js"><link rel="prefetch" href="/blog/assets/js/19.cc79e501.js"><link rel="prefetch" href="/blog/assets/js/20.3b952ac9.js"><link rel="prefetch" href="/blog/assets/js/3.e199ecce.js"><link rel="prefetch" href="/blog/assets/js/4.3517de2a.js"><link rel="prefetch" href="/blog/assets/js/5.629fe7cb.js"><link rel="prefetch" href="/blog/assets/js/6.0bef8619.js"><link rel="prefetch" href="/blog/assets/js/7.dd915545.js"><link rel="prefetch" href="/blog/assets/js/8.b29c4ec3.js"><link rel="prefetch" href="/blog/assets/js/9.977852c6.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.c46edb2a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">EEDC NOTES</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Menu" class="dropdown-title"><span class="title">Menu</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Backend
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/java/" class="nav-link router-link-active">
+  Java
+</a></li><li class="dropdown-subitem"><a href="/blog/net/" class="nav-link">
+  .Net
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Front-end
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/angular/" class="nav-link">
+  Angular
+</a></li><li class="dropdown-subitem"><a href="/blog/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/blog/js/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-subitem"><a href="/blog/app/" class="nav-link">
+  App
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about.html" class="nav-link">
+  About
+</a></div><div class="nav-item"><a href="/blog/contact.html" class="nav-link">
+  Contact
+</a></div><div class="nav-item"><a href="https://github.com/cade8800" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Menu" class="dropdown-title"><span class="title">Menu</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Backend
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/java/" class="nav-link router-link-active">
+  Java
+</a></li><li class="dropdown-subitem"><a href="/blog/net/" class="nav-link">
+  .Net
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Front-end
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/angular/" class="nav-link">
+  Angular
+</a></li><li class="dropdown-subitem"><a href="/blog/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/blog/js/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-subitem"><a href="/blog/app/" class="nav-link">
+  App
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about.html" class="nav-link">
+  About
+</a></div><div class="nav-item"><a href="/blog/contact.html" class="nav-link">
+  Contact
+</a></div><div class="nav-item"><a href="https://github.com/cade8800" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/" aria-current="page" class="sidebar-link">Home</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/java/" class="sidebar-heading clickable router-link-active open"><span>Java</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/java/1.html" aria-current="page" class="active sidebar-link">Spring Data JPA 简单查询--方法定义规则</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/java/2.html" class="sidebar-link">自己实现String转Integer</a></li><li><a href="/blog/java/3.html" class="sidebar-link">25种设计模式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/java/3.html#创建型" class="sidebar-link">创建型</a></li><li class="sidebar-sub-header"><a href="/blog/java/3.html#行为型" class="sidebar-link">行为型</a></li><li class="sidebar-sub-header"><a href="/blog/java/3.html#结构型" class="sidebar-link">结构型</a></li></ul></li><li><a href="/blog/java/4.html" class="sidebar-link">类成员的修饰符public、private、protected的区别</a></li><li><a href="/blog/java/5.html" class="sidebar-link">spring-boot-starter-validation 各常用注释使用说明</a></li><li><a href="/blog/java/6.html" class="sidebar-link">Oracle 循环读取某个时间点之后的大量数据的两种方案</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/java/6.html#逻辑" class="sidebar-link">逻辑</a></li><li class="sidebar-sub-header"><a href="/blog/java/6.html#优点" class="sidebar-link">优点</a></li><li class="sidebar-sub-header"><a href="/blog/java/6.html#缺点" class="sidebar-link">缺点</a></li><li class="sidebar-sub-header"><a href="/blog/java/6.html#争议点" class="sidebar-link">争议点</a></li><li class="sidebar-sub-header"><a href="/blog/java/6.html#性能" class="sidebar-link">性能</a></li><li class="sidebar-sub-header"><a href="/blog/java/6.html#sql" class="sidebar-link">SQL</a></li><li class="sidebar-sub-header"><a href="/blog/java/6.html#逻辑-2" class="sidebar-link">逻辑</a></li><li class="sidebar-sub-header"><a href="/blog/java/6.html#优点-2" class="sidebar-link">优点</a></li><li class="sidebar-sub-header"><a href="/blog/java/6.html#缺点-2" class="sidebar-link">缺点</a></li><li class="sidebar-sub-header"><a href="/blog/java/6.html#缺点预防措施" class="sidebar-link">缺点预防措施</a></li><li class="sidebar-sub-header"><a href="/blog/java/6.html#性能-2" class="sidebar-link">性能</a></li><li class="sidebar-sub-header"><a href="/blog/java/6.html#sql-2" class="sidebar-link">SQL</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blog/js/" class="sidebar-heading clickable"><span>JavaScript</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/blog/app/" class="sidebar-link">App</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/app/#软著申请" class="sidebar-link">软著申请</a></li><li class="sidebar-sub-header"><a href="/blog/app/#app端" class="sidebar-link">App端</a></li><li class="sidebar-sub-header"><a href="/blog/app/#android-端" class="sidebar-link">Android 端</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="spring-data-jpa-简单查询-方法定义规则"><a href="#spring-data-jpa-简单查询-方法定义规则" class="header-anchor">#</a> Spring Data JPA 简单查询--方法定义规则</h1> <h3 id="一、常用规则速查"><a href="#一、常用规则速查" class="header-anchor">#</a> 一、常用规则速查</h3> <table><thead><tr><th style="text-align:center;">#</th> <th style="text-align:center;">#</th> <th style="text-align:center;">#</th></tr></thead> <tbody><tr><td style="text-align:center;">1</td> <td style="text-align:center;"><code>And</code></td> <td style="text-align:center;">并且</td></tr> <tr><td style="text-align:center;">2</td> <td style="text-align:center;"><code>Or</code></td> <td style="text-align:center;">或</td></tr> <tr><td style="text-align:center;">3</td> <td style="text-align:center;"><code>Is,Equals</code></td> <td style="text-align:center;">等于</td></tr> <tr><td style="text-align:center;">4</td> <td style="text-align:center;"><code>Between</code></td> <td style="text-align:center;">两者之间</td></tr> <tr><td style="text-align:center;">5</td> <td style="text-align:center;"><code>LessThan</code></td> <td style="text-align:center;">小于</td></tr> <tr><td style="text-align:center;">6</td> <td style="text-align:center;"><code>LessThanEqual</code></td> <td style="text-align:center;">小于等于</td></tr> <tr><td style="text-align:center;">7</td> <td style="text-align:center;"><code>GreaterThan</code></td> <td style="text-align:center;">大于</td></tr> <tr><td style="text-align:center;">8</td> <td style="text-align:center;"><code>GreaterThanEqual</code></td> <td style="text-align:center;">大于等于</td></tr> <tr><td style="text-align:center;">9</td> <td style="text-align:center;"><code>After</code></td> <td style="text-align:center;">之后（时间） &gt;</td></tr> <tr><td style="text-align:center;">10</td> <td style="text-align:center;"><code>Before</code></td> <td style="text-align:center;">之前（时间） &lt;</td></tr> <tr><td style="text-align:center;">11</td> <td style="text-align:center;"><code>IsNull</code></td> <td style="text-align:center;">等于Null</td></tr> <tr><td style="text-align:center;">12</td> <td style="text-align:center;"><code>IsNotNull,NotNull</code></td> <td style="text-align:center;">不等于Null</td></tr> <tr><td style="text-align:center;">13</td> <td style="text-align:center;"><code>Like</code></td> <td style="text-align:center;">模糊查询。查询件中需要自己加 %</td></tr> <tr><td style="text-align:center;">14</td> <td style="text-align:center;"><code>NotLike</code></td> <td style="text-align:center;">不在模糊范围内。查询件中需要自己加 %</td></tr> <tr><td style="text-align:center;">15</td> <td style="text-align:center;"><code>StartingWith</code></td> <td style="text-align:center;">以某开头</td></tr> <tr><td style="text-align:center;">16</td> <td style="text-align:center;"><code>EndingWith</code></td> <td style="text-align:center;">以某结束</td></tr> <tr><td style="text-align:center;">17</td> <td style="text-align:center;"><code>Containing</code></td> <td style="text-align:center;">包含某</td></tr> <tr><td style="text-align:center;">18</td> <td style="text-align:center;"><code>OrderBy</code></td> <td style="text-align:center;">排序</td></tr> <tr><td style="text-align:center;">19</td> <td style="text-align:center;"><code>Not</code></td> <td style="text-align:center;">不等于</td></tr> <tr><td style="text-align:center;">20</td> <td style="text-align:center;"><code>In</code></td> <td style="text-align:center;">某范围内</td></tr> <tr><td style="text-align:center;">21</td> <td style="text-align:center;"><code>NotIn</code></td> <td style="text-align:center;">某范围外</td></tr> <tr><td style="text-align:center;">22</td> <td style="text-align:center;"><code>True</code></td> <td style="text-align:center;">真</td></tr> <tr><td style="text-align:center;">23</td> <td style="text-align:center;"><code>False</code></td> <td style="text-align:center;">假</td></tr> <tr><td style="text-align:center;">24</td> <td style="text-align:center;"><code>IgnoreCase</code></td> <td style="text-align:center;">忽略大小写</td></tr></tbody></table> <p><img src="https://img2020.cnblogs.com/blog/359884/202006/359884-20200604104322759-1912272335.png" alt=""></p> <h3 id="二、spring-data-解析方法名-规则说明"><a href="#二、spring-data-解析方法名-规则说明" class="header-anchor">#</a> 二、Spring Data 解析方法名--规则说明</h3> <p>1、规则描述</p> <p>按照Spring data 定义的规则，查询方法以<code>find|read|get</code>开头（比如<code>find、findBy、read、readBy、get、getBy</code>），涉及条件查询时，条件的属性用条件关键字连接，要注意的是：条件属性首字母需大写。框架在进行方法名解析时，会先把方法名多余的前缀截取掉，然后对剩下部分进行解析。</p> <p>如果方法的最后一个参数是 <strong>Sort</strong> 或者 <strong>Pageable</strong> 类型，也会提取相关的信息，以便按规则进行排序或者分页查询。</p> <p>2、举例说明</p> <p>比如 <code>findByUserAddressZip()</code>。框架在解析该方法时，首先剔除<code>findBy</code>，然后对剩下的属性进行解析，详细规则如下（此处假设该方法针对的域对象为 AccountInfo 类型）：</p> <p>先判断 <code>userAddressZip</code> **（根据 POJO 规范，首字母变为小写，下同）**是否为 <code>AccountInfo</code> 的一个属性，如果是，则表示根据该属性进行查询；如果没有该属性，继续第二步；
+从右往左截取第一个大写字母开头的字符串（此处为 Zip），然后检查剩下的字符串是否为 <code>AccountInfo</code> 的一个属性，如果是，则表示根据该属性进行查询；如果没有该属性，则重复第二步，继续从右往左截取；最后假设 <code>user</code> 为 <code>AccountInfo</code> 的一个属性；
+接着处理剩下部分（ <code>AddressZip</code> ），先判断 <code>user</code>所对应的类型是否有 <code>addressZip</code> 属性，如果有，则表示该方法最终是根据<code>&quot;AccountInfo.user.addressZip&quot;</code> 的取值进行查询；否则继续按照步骤 2 的规则从右往左截取，最终表示根据 <code>&quot;AccountInfo.user.address.zip&quot;</code> 的值进行查询。
+可能会存在一种特殊情况，比如<code>AccountInfo</code> 包含一个 <code>user</code> 的属性，也有一个 <code>userAddress</code> 属性，此时会存在混淆。读者可以明确在属性之间加上<code>&quot;_&quot;</code>以显式表达意图，比如<code>&quot;findByUser_AddressZip()&quot;</code> 或者 <code>&quot;findByUserAddress_Zip()&quot;</code>。
+（强烈建议：无论是否存在混淆，都要在不同类层级之间加上<code>&quot;_&quot;</code> ，增加代码可读性）</p> <h3 id="三、一些情况"><a href="#三、一些情况" class="header-anchor">#</a> 三、一些情况</h3> <h4 id="_1、当查询条件为null时。"><a href="#_1、当查询条件为null时。" class="header-anchor">#</a> 1、当查询条件为null时。</h4> <p>举例说明如下：</p> <ul><li>实体定义：对于一个客户实体Cus,包含有name和sex，均是String类型。</li> <li>查询方法定义：<code>List&lt;Cus&gt; findByNameAndSex(String name,String sex);</code></li> <li>使用时：dao.findByNameAndSex(null, &quot;男&quot;);</li> <li>后台生成sql片断：where (cus0_.name is null) and cus0_.sex=?</li> <li>结论：当查询时传值是null时，数据库中只有该字段是null的记录才符合条件，并不是说忽略这个条件。也就是说，这种查询方式，只适合于明确查询条件必须传的业务，对于动态查询（条件多少是动态的，例如一般的查询列表，由最终用户使用时决定输入那些查询条件），这种简单查询是不能满足要求的。</li></ul> <h4 id="_2、排序"><a href="#_2、排序" class="header-anchor">#</a> 2、排序</h4> <div class="language- extra-class"><pre class="language-text"><code>List&lt;Cus&gt; findBySexOrderByName(String sex); //名称正序（正序时，推荐此方式，简单）
+List&lt;Cus&gt; findBySexOrderByNameAsc(String sex); //名称正序（效果同上）
+List&lt;Cus&gt; findBySexOrderByNameDesc(String sex); //名称倒序
+</code></pre></div><h4 id="_3、结果限制"><a href="#_3、结果限制" class="header-anchor">#</a> 3、结果限制</h4> <div class="language- extra-class"><pre class="language-text"><code>/**
+     * 根据父ID，得到排序号最大的bo。
+     * 用于预计算新资源的排序号。
+     */
+Resource findFirstByFather_idOrderByOrderNumDesc(Long fatherId);
+
+User findFirstByOrderByLastnameAsc();
+
+User findTopByOrderByAgeDesc();
+
+Page&lt;User&gt; queryFirst10ByLastname(String lastname, Pageable pageable);
+
+Slice&lt;User&gt; findTop3ByLastname(String lastname, Pageable pageable);
+
+List&lt;User&gt; findFirst10ByLastname(String lastname, Sort sort);
+
+List&lt;User&gt; findTop10ByLastname(String lastname, Pageable pageable);  
+</code></pre></div><h4 id="_4、计数"><a href="#_4、计数" class="header-anchor">#</a> 4、计数</h4> <div class="language- extra-class"><pre class="language-text"><code>Long countByLastname(String lastname);
+</code></pre></div><h4 id="_5、删除"><a href="#_5、删除" class="header-anchor">#</a> 5、删除</h4> <div class="language- extra-class"><pre class="language-text"><code>void deleteByProject_Id(Long id);
+void deleteByProject_Cus_id(Long id);
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/cade8800/blog/edit/master/docs/java/1.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">11/17/2020, 4:01:47 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/" class="prev router-link-active">
+        Home
+      </a></span> <span class="next"><a href="/blog/java/2.html">
+        自己实现String转Integer
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.519dcfbe.js" defer></script><script src="/blog/assets/js/2.47a29e6a.js" defer></script><script src="/blog/assets/js/10.5ebb890a.js" defer></script>
+  </body>
+</html>
