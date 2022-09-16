@@ -2,27 +2,68 @@ import { defineUserConfig, defaultTheme } from 'vuepress'
 
 const sidebarList = [
   {
-    text: 'Java',
+    text: '后端',
     children: [
-      '/java/25种设计模式',
-      '/java/多线程并发同步场景及解决方案',
-      '/java/类成员的修饰符public、private、protected的区别',
-      '/java/自己实现String转Integer',
-      '/java/Oracle 循环读取某个时间点之后的大量数据的两种方案',
-      '/java/SpringDataJPA简单查询--方法定义规则',
-      '/java/spring-boot-starter-validation 各常用注释使用说明'
+      {
+        text: '环境',
+        link: '',
+        children: [
+          '/backend/env/centeros 安装 jdk1.8',
+          '/backend/env/Docker安装',
+          '/backend/env/Linux安装rpm式安装mysql',
+          '/backend/env/安装Tengine'
+        ],
+      },
+
+      '/backend/25种设计模式',
+      '/backend/多线程并发同步场景及解决方案',
+      '/backend/类成员的修饰符public、private、protected的区别',
+      '/backend/自己实现String转Integer',
+      '/backend/Oracle 循环读取某个时间点之后的大量数据的两种方案',
+      '/backend/SpringDataJPA简单查询--方法定义规则',
+      '/backend/spring-boot-starter-validation 各常用注释使用说明',
+
+
+      '/backend/分布式事务的四种解决方案',
+      '/backend/关于并发',
+      '/backend/关于事务',
+      '/backend/数据库建模',
+      '/backend/微服务：注册中心ZooKeeper、Eureka、Consul 、Nacos对比',
+      '/backend/Apache ab压力测试',
+      '/backend/centos 文件权限',
+      '/backend/Elasticsearch（ES）分布式架构原理',
+      '/backend/HashMap 遍历的几种方式',
+      '/backend/Java 线程安全 list',
+      '/backend/JVM -- 内存模型(jmm)',
+      '/backend/JVM（java虚拟机）底层',
+      '/backend/kafka工作原理',
+      '/backend/Maven settings.xml',
+      '/backend/Mysql性能优化',
+      '/backend/Redis',
+      '/backend/Redis常用命令',
+      '/backend/redis通用key操作命令(总)',
+      '/backend/SpringCloud',
+      '/backend/windows10 右键添加打开cmd菜单',
+      '/backend/Zookeeper实现分布式锁'
     ],
   },
   {
-    text: 'Js',
+    text: '前端',
     children: [
-      '/js/数组方法及es6新增数组方法'
+      '/frontend/数组方法及es6新增数组方法',
+      '/frontend/fetch demo'
     ]
   },
   {
-    text: 'app',
+    text: '应用',
     children: [
       '/app/App上架应用流程'
+    ]
+  },
+  {
+    text: '网络',
+    children: [
+      '/network/v2rayN 订阅地址'
     ]
   },
   {
