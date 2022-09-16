@@ -1,5 +1,5 @@
 ---
-home: false
+home: true
 heroImage: 
 actionText: 文档 →
 actionLink: /java/
