@@ -4,8 +4,8 @@
 > https://zhuanlan.zhihu.com/p/140419781
 
 
-#|说明|内部实现
--|-|-
+|#|说明|内部实现
+---|---|---
 Collections.synchronizedList|Collections中有许多这个系列的方法，主要是利用了装饰者模式对传入的集合进行调用 Collotions中有内部类SynchronizedList，效率最高，线程安全|synchronized
 CopyOnWriteArrayList|CopyOnWrite 写入时复制，它使一个List同步的替代品，通常情况下提供了更好的并发性，并且避免了再迭代时候对容器的加锁和复制。通常更适合用于迭代，在多插入的情况下由于多次的复制性能会一定的下降。|Lock
 
