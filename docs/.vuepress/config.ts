@@ -16,6 +16,7 @@ const sidebarList = [
       },
 
       '/backend/25种设计模式',
+      '/backend/多线程编程中的上下文切换',
       '/backend/多线程并发同步场景及解决方案',
       '/backend/类成员的修饰符public、private、protected的区别',
       '/backend/自己实现String转Integer',
@@ -44,7 +45,8 @@ const sidebarList = [
       '/backend/redis通用key操作命令(总)',
       '/backend/SpringCloud',
       '/backend/windows10 右键添加打开cmd菜单',
-      '/backend/Zookeeper实现分布式锁'
+      '/backend/Zookeeper实现分布式锁',
+      '/backend/分布式消息队列'
     ],
   },
   {
