@@ -11,7 +11,9 @@ const sidebarList = [
           '/backend/env/centeros 安装 jdk1.8',
           '/backend/env/Docker安装',
           '/backend/env/Linux安装rpm式安装mysql',
-          '/backend/env/安装Tengine'
+          '/backend/env/安装Tengine',
+          '/backend/env/RabbitMQ安装说明文档',
+          '/backend/env/RabbitMQ集群搭建'
         ],
       },
 
@@ -46,7 +48,8 @@ const sidebarList = [
       '/backend/SpringCloud',
       '/backend/windows10 右键添加打开cmd菜单',
       '/backend/Zookeeper实现分布式锁',
-      '/backend/分布式消息队列'
+      '/backend/分布式消息队列',
+      '/backend/RabbitMQ'
     ],
   },
   {
