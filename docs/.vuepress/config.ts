@@ -96,6 +96,12 @@ const sidebarList = [
       '/project-management/挣值管理 (EVM ）- 挣值计算汇总表',
       '/project-management/质量成本',
     ]
+  },
+  {
+    text: '房产',
+    children: [
+      '/real-estate/2022-Guangzhou-Real-Estate-White-Paper'
+    ]
   }
 ];
 
