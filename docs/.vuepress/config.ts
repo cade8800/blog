@@ -100,7 +100,7 @@ const sidebarList = [
 ];
 
 export default defineUserConfig({
-  base: '/blog/',
+  base: '/',
   lang: 'zh-CN',
   title: 'EEDC NOTES',
   description: 'Man is born free; and everywhere he is in chains. One thinks himself the master of others, and still remains a greater slave than they.',
