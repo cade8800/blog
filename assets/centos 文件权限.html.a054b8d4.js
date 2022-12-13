@@ -1,0 +1,10 @@
+import{_ as e,o as n,c as s,d as i}from"./app.af5ffdc4.js";const d={},r=i(`<h1 id="centos-\u6587\u4EF6\u6743\u9650" tabindex="-1"><a class="header-anchor" href="#centos-\u6587\u4EF6\u6743\u9650" aria-hidden="true">#</a> centos \u6587\u4EF6\u6743\u9650</h1><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>ls -l token.txt
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>-rw------- (600) \u53EA\u6709\u6240\u6709\u8005\u624D\u6709\u8BFB\u548C\u5199\u7684\u6743\u9650
+-rw-r--r-- (644) \u53EA\u6709\u6240\u6709\u8005\u624D\u6709\u8BFB\u548C\u5199\u7684\u6743\u9650\uFF0C\u7EC4\u7FA4\u548C\u5176\u4ED6\u4EBA\u53EA\u6709\u8BFB\u7684\u6743\u9650
+-rwx------ (700) \u53EA\u6709\u6240\u6709\u8005\u624D\u6709\u8BFB\uFF0C\u5199\uFF0C\u6267\u884C\u7684\u6743\u9650
+-rwxr-xr-x (755) \u53EA\u6709\u6240\u6709\u8005\u624D\u6709\u8BFB\uFF0C\u5199\uFF0C\u6267\u884C\u7684\u6743\u9650\uFF0C\u7EC4\u7FA4\u548C\u5176\u4ED6\u4EBA\u53EA\u6709\u8BFB\u548C\u6267\u884C\u7684\u6743\u9650
+-rwx--x--x (711) \u53EA\u6709\u6240\u6709\u8005\u624D\u6709\u8BFB\uFF0C\u5199\uFF0C\u6267\u884C\u7684\u6743\u9650\uFF0C\u7EC4\u7FA4\u548C\u5176\u4ED6\u4EBA\u53EA\u6709\u6267\u884C\u7684\u6743\u9650
+-rw-rw-rw- (666) \u6BCF\u4E2A\u4EBA\u90FD\u6709\u8BFB\u5199\u7684\u6743\u9650
+-rwxrwxrwx (777) \u6BCF\u4E2A\u4EBA\u90FD\u6709\u8BFB\u5199\u548C\u6267\u884C\u7684\u6743\u9650
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>chmod 777 token.txt
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>`,4),t=[r];function a(l,c){return n(),s("div",null,t)}const v=e(d,[["render",a],["__file","centos \u6587\u4EF6\u6743\u9650.html.vue"]]);export{v as default};
